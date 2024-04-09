@@ -2,7 +2,7 @@
 %
 % function to compute and display the five platonic solids.
 %
-% Author and support : nicolas.douillet (at) free.fr, 2020.
+% Author : nicolas.douillet (at) free.fr, 2020-2024.
 %
 %
 %% About / info 
@@ -48,9 +48,9 @@
 %
 %
 % <https://fr.mathworks.com/matlabcentral/fileexchange/69212-n-level-geoid?s_tid=prof_contriblnk n_level_geoid> |
-% <https://fr.mathworks.com/matlabcentral/fileexchange/65574-tetrahedron-circumscribed-sphere?s_tid=prof_contriblnk Tetrahedron_circumscribed_sphere> |
-% <https://fr.mathworks.com/matlabcentral/fileexchange/73159-meshed-reuleaux-tetrahedron?s_tid=prof_contriblnk meshed_reuleaux_tetrahedron> |
-% <https://fr.mathworks.com/matlabcentral/fileexchange/73178-n-level-sierpinski-tetrahedron?s_tid=prof_contriblnk Sierpinski_tetrahedron>
+% <https://fr.mathworks.com/matlabcentral/fileexchange/65574-tetrahedron-circumscribed-sphere?s_tid=prof_contriblnk Tetrahedron_circumsphere> |
+% <https://fr.mathworks.com/matlabcentral/fileexchange/130034-regular-polyhedron-inscribed-sphere?s_tid=srchtitle Regular_polyhedron_insphere> |
+% <https://fr.mathworks.com/matlabcentral/fileexchange/121133-tetrahedron-insphere?s_tid=srchtitle Tetrahedron_insphere>
 %
 %
 %% Input arguments

@@ -1,5 +1,5 @@
 function [V, F] = platonic_solids(id, Rho, option_display, face_type)
-%% platonic_solids : function to compute and display the five platonic solids.
+% platonic_solids : function to compute and display the five platonic solids.
 %
 % % About / info
 %
@@ -10,7 +10,7 @@ function [V, F] = platonic_solids(id, Rho, option_display, face_type)
 % - F the number of faces.  
 %
 %
-% Author and support : nicolas.douillet (at) free.fr, 2020.
+% Author : nicolas.douillet (at) free.fr, 2020-2024.
 %
 %
 % Syntax
@@ -85,7 +85,7 @@ function [V, F] = platonic_solids(id, Rho, option_display, face_type)
 % V = V + repmat([1 2 3],[size(V,1),1]); % translate the centre from [0 0 0] to [1 2 3]
 
 
-%% Input parsing
+% Input parsing
 if nargin < 4
     
     face_type = 'default';
@@ -110,7 +110,7 @@ if nargin < 4
 end
 
 
-%% Body
+% Body
 phi = 0.5*(1+sqrt(5));
 
 switch id
@@ -320,10 +320,7 @@ V = Rho*V;
 
 if option_display
     
-    plot_mesh(V,F,Rho,'none',color,2,false);
-    
-    % % another display type; uncomment/comment to enable/disable
-    % plot_mesh(V,F,Rho,color,[0 0 0],0.5,false);
+    plot_mesh(V,F,Rho,color,color,2,false);
         
 end
 
@@ -331,15 +328,15 @@ end
 end % platonic_solids
 
 
-%% plot subfunction
+% plot subfunction
 function [] = plot_mesh(V, F, Rho, facecolor, edgecolor, linewidth, disp_sphere)
 
 
 h = figure;
-set(h,'Position',get(0,'ScreenSize'));
+% set(h,'Position',get(0,'ScreenSize'));
 set(gcf,'Color',[0 0 0]);
 
-patch('Faces',F,'Vertices',V,'FaceVertexCData',[0 1 1],'FaceColor',facecolor,'LineWidth',linewidth,'EdgeColor',edgecolor), hold on;        
+patch('Faces',F,'Vertices',V,'FaceVertexCData',[0 1 1],'FaceColor',facecolor,'FaceAlpha',0.2,'LineWidth',linewidth,'EdgeColor',edgecolor), hold on;        
 
 if disp_sphere
    
@@ -356,7 +353,6 @@ if disp_sphere
     
 end
 
-alpha(0.5);
 xlabel('X'), ylabel('Y'), zlabel('Z');
 axis equal, axis tight;
 ax = gca;
