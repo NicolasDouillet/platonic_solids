@@ -10,7 +10,7 @@ function [V, F] = platonic_solids(id, Rho, option_display, face_type)
 % - F the number of faces.  
 %
 %
-% Author : nicolas.douillet (at) free.fr, 2020-2024.
+% Author : nicolas.douillet9 (at) gmail.com, 2020-2024.
 %
 %
 % Syntax
@@ -248,7 +248,7 @@ switch id
         [V,F] = platonic_solids(4,Rho,false); % from the icosahedron, as its dual polyhedron
         
         V = cell2mat(cellfun(@(r) mean(V(r,:),1),num2cell(F,2),'UniformOutput', false));                
-        V = V ./ repmat(vecnorm(V',2)',[1,3]);
+        V = V ./ repmat(sqrt(sum(V.^2,2)),[1,3]);
         
         if strcmpi(face_type,'default')
         

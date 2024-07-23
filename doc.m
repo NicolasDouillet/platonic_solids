@@ -2,7 +2,7 @@
 %
 % function to compute and display the five platonic solids.
 %
-% Author : nicolas.douillet (at) free.fr, 2020-2024.
+% Author : nicolas.douillet9 (at) gmail.com, 2020-2024.
 %
 %
 %% About / info 
